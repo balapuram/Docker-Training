@@ -15,4 +15,8 @@ Step4: Pull image to local
     docker pull balapuram/my-flask-webapp:latest
 
 Step5: Run the container
+    
+    docker run --name my-webapp -d -p 9090:8080 balapuram/my-flask-webapp
+Step6: Test it
 
+    Then you can hit http://localhost:9090 or http://host-ip:9090 in your browser.
