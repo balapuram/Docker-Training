@@ -1,0 +1,15 @@
+Step1: Go to docker-compose-demo4 directory
+
+Step2: Run below command to bring up multi containers
+
+    docker-compose up -d
+
+    docker-compose ps
+
+    docker-compose stop
+
+    docker-compose start
+
+    docker-compose down
+    
+
