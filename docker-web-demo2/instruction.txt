@@ -1,0 +1,16 @@
+Step1: Go inside sample-webapp-flask directory
+
+Step2: Run docker build command to create docker image
+
+    docker build . -t balapuram/my-flash-webapp
+
+Stepe3: Push image to docker hub
+
+    docker push balapuram/my-flask-webapp:latest
+
+Step4: Pull image to local
+
+    docker pull balapuram/my-flask-webapp:latest
+
+Step5: Run the container
+
