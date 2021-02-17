@@ -1,8 +1,10 @@
 Step1: Go inside sample-webapp-flask directory
 
 Step2: Run docker build command to create docker image
-
-    docker build . -t balapuram/my-flash-webapp
+    
+    docker build . -t <docker hub repo name>/<image name>
+    
+ Ex:   docker build . -t balapuram/my-flash-webapp
 
 Stepe3: Push image to docker hub
 
