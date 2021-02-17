@@ -1,8 +1,31 @@
-Bind Mount:
+1.Bind Mount:
+----------
 
-docker run -dit --name my-apache-app -p 8080:80 -v /tmp:/usr/local/apache2/htdocs/ httpd:2.4
+Step1: Run apache container which will bind /tmp directory to DocumentRoot directory of Apache.
 
-Docker volume mount:
+    docker run -dit --name my-apache-app -p 8080:80 -v /tmp:/usr/local/apache2/htdocs/ httpd:2.4
+
+Step2: Inspect docker to check the mounts created
+
+    docker insepct <container-id>
+
+Step3:  Get in to container and make changes on DocumentRoot of Apache
+
+    docker exec -it my-apache-app bash
+
+Step4: Then you can hit http://localhost:8080 or http://host-ip:8080 in your browser.
+
+Step5: Stop the container
+
+    docker stop my-apache-app
+
+Step6: Remove the container
+
+    docker rm my-apache-app
+
+
+2.Docker volume mount:
+----------------------
 
 docker volume create my-volume
 
