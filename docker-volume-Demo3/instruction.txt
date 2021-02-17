@@ -1,0 +1,11 @@
+Bind Mount:
+
+docker run -dit --name my-apache-app -p 8080:80 -v /tmp:/usr/local/apache2/htdocs/ httpd:2.4
+
+Docker volume mount:
+
+docker volume create my-volume
+
+docker volume inspect my-volume
+
+docker run -dit --name my-apache-app -p 8080:80 -v my-volume:/usr/local/apache2/htdocs/ httpd:2.4

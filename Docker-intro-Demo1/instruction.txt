@@ -1,0 +1,31 @@
+step1:
+    Go the docker hub https://hub.docker.com/
+step2:
+    pull the nginx docker image from docker hub
+
+    docker pull nginx
+step3:
+    Run the docker image
+
+    docker run --name my-nginx -d nginx
+
+step4:
+    Get in to the container
+
+    docker exec -it my-nginx bash
+
+step5: Validate it that you nginx web server is working fine in the container
+
+    curl http://localhost:80
+
+step6: Exposing external port
+
+    docker stop my-nginx
+    docker rm my-nginx
+    docker run --name my-nginx1 -d -p 8080:80 nginx
+
+step 7: Test it on your host machine
+
+    Then you can hit http://localhost:8080 or http://host-ip:8080 in your browser.
+
+
